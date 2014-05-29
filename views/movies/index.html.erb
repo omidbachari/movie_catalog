@@ -1,0 +1,19 @@
+<% @movie_data.each do |movie| %>
+<table width="900">
+  <thead>
+  <th width="300" align="left">Movie Title</th>
+  <th width="100" align="left">Year</th>
+  <th width="100" align="left">Rating</th>
+  <th width="100" align="left">Genre</th>
+  <th width="300" align="left">Studio</th>
+  </thead>
+  <tr>
+  <td><a href="/movies/<%="#{movie["id"]}"%>"><%= movie["title"] %></a></td>
+  <td> <%= movie["year"] %> </td>
+  <td> <%= movie["rating"] %> </td>
+  <td> <%= movie["genre"] %> </td>
+  <td> <%= movie["studio"] %> </td>
+  </tr>
+</table>
+<% end %>
+

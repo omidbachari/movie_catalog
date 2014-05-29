@@ -1,0 +1,16 @@
+<ul>
+  <li> <%= "Genre: #{@movie_details[0]["genre"]}" %> </li>
+  <br>
+  <li> <%= "Studio: #{@movie_details[0]["studio"]}" %> </li>
+</ul>
+
+<%@movie_details.each do |detail| %>
+<ul>
+<li>
+<a href="/actors/<%="#{detail["id"]}"%>"><%= "#{detail["actor"]}" %></a>
+<br>
+<%= "As \"#{detail["character"]}\"" %>
+
+</li>
+</ul>
+<% end %>
